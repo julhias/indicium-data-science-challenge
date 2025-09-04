@@ -48,7 +48,6 @@ Uma das questões centrais do projeto era determinar se o gênero de um filme po
 ├── LH_CD_JuliaPedro.pkl    # Modelo treinado e componentes (scaler, encoders, etc.).
 ├── README.md              # Documentação do projeto (este arquivo).
 ├── analise_filmes.ipynb   # Notebook Jupyter com todo o código e a análise.
-└── requirements.txt       # Lista de dependências para reprodução do ambiente.
 ```
 
 ## Como Executar o Projeto
