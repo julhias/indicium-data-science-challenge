@@ -37,7 +37,7 @@ Uma das questões centrais do projeto era determinar se o gênero de um filme po
     * `Pandas` e `NumPy` para manipulação e limpeza de dados.
     * `Scikit-learn` para pré-processamento e engenharia de features.
     * `XGBoost` para a construção do modelo de regressão.
-    * `Matplotlib` e `Seaborn` для создания визуализаций.
+    * `Matplotlib` e `Seaborn`.
     * `Requests` para consumo da API do TMDb.
     * `Tqdm` para barras de progresso.
 * **Ambiente:** Google Colab.
