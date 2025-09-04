@@ -22,7 +22,7 @@ A análise dos dados, combinando informações do IMDB e do TMDb, revelou conclu
 * **3. A Fórmula da Aclamação:** O fator mais importante para prever uma alta nota de avaliação é o **"Star Power"**. A reputação prévia do **ator principal** e do **diretor** são os indicadores mais fortes de que um filme será bem recebido.
 
 * **4. O Papel das Franquias:** Franquias e sequências não garantem, em média, uma avaliação superior à de filmes originais. Sua força reside na **mitigação de risco financeiro** ao capitalizar sobre uma base de fãs já existente.
- ## 🔬 Análise de Texto (NLP) para Classificação de Gênero
+ ## Análise de Texto (NLP) para Classificação de Gênero
 
 Uma das questões centrais do projeto era determinar se o gênero de um filme poderia ser inferido a partir de sua sinopse.
 
