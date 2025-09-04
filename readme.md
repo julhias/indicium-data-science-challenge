@@ -9,7 +9,7 @@ Este projeto realiza uma análise do dataset "IMDB Top 1000 Movies" com o objeti
 Os dois pilares do projeto são:
 1.  **Análise de Negócio:** Extrair insights sobre os fatores que impulsionam o sucesso financeiro (medido pelo Retorno sobre Investimento - ROI) e o sucesso de crítica/público (medido pela nota IMDB).
 2.  **Modelagem Preditiva:** Construir e treinar um modelo de Machine Learning (usando XGBoost) para prever a nota IMDB de um filme com base em suas características.
-3.  3.  **Análise de Texto (NLP):** Investigar se a sinopse de um filme (`Overview`) contém informações suficientes para prever seu gênero, utilizando modelos que vão de LSTMs a Transformers (BERT).
+3.   **Análise de Texto (NLP):** Investigar se a sinopse de um filme (`Overview`) contém informações suficientes para prever seu gênero, utilizando modelos que vão de LSTMs a Transformers (BERT).
 
 ## Principais Insights de Negócio
 
