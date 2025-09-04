@@ -9,6 +9,7 @@ Este projeto realiza uma análise do dataset "IMDB Top 1000 Movies" com o objeti
 Os dois pilares do projeto são:
 1.  **Análise de Negócio:** Extrair insights sobre os fatores que impulsionam o sucesso financeiro (medido pelo Retorno sobre Investimento - ROI) e o sucesso de crítica/público (medido pela nota IMDB).
 2.  **Modelagem Preditiva:** Construir e treinar um modelo de Machine Learning (usando XGBoost) para prever a nota IMDB de um filme com base em suas características.
+3.  3.  **Análise de Texto (NLP):** Investigar se a sinopse de um filme (`Overview`) contém informações suficientes para prever seu gênero, utilizando modelos que vão de LSTMs a Transformers (BERT).
 
 ## 🚀 Principais Insights de Negócio
 
@@ -21,6 +22,13 @@ A análise dos dados, combinando informações do IMDB e do TMDb, revelou conclu
 * **3. A Fórmula da Aclamação:** O fator mais importante para prever uma alta nota de avaliação é o **"Star Power"**. A reputação prévia do **ator principal** e do **diretor** são os indicadores mais fortes de que um filme será bem recebido.
 
 * **4. O Papel das Franquias:** Franquias e sequências não garantem, em média, uma avaliação superior à de filmes originais. Sua força reside na **mitigação de risco financeiro** ao capitalizar sobre uma base de fãs já existente.
+* ## 🔬 Análise de Texto (NLP) para Classificação de Gênero
+
+Uma das questões centrais do projeto era determinar se o gênero de um filme poderia ser inferido a partir de sua sinopse.
+
+* **Validação da Hipótese:** Sim. A análise provou que a coluna `Overview` contém um sinal preditivo claro, ainda que de força moderada.
+* **Evolução dos Modelos:** Modelos iniciais (LSTM) tiveram dificuldade com o desbalanceamento de classes. A solução foi implementar um modelo Transformer pré-treinado, o **BERT**, que se mostrou muito superior.
+* **Performance do BERT:** O modelo final alcançou **42% de acurácia** e um **macro F1-score de 0.40** (mais que o dobro do LSTM), demonstrando um desempenho equilibrado e justo entre todos os gêneros. Isso confirmou o valor da sinopse como uma feature estratégica.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -67,8 +75,14 @@ O objetivo do modelo final era prever a nota do IMDB. A performance foi:
 
 O R² relativamente baixo reforça o principal insight do projeto: métricas financeiras e de produção têm baixo poder explicativo sobre a aclamação final de um filme, que é um fenômeno altamente subjetivo e mais dependente de fatores de reputação (elenco e diretor).
 
+## 💬 Respostas às Perguntas do Desafio
+
+- **Filme para um desconhecido:** Foi criado um "Universal Score" ponderando a nota IMDB e o número de votos. O filme recomendado foi "The Shawshank Redemption".
+- **Fatores para alto faturamento:** Gêneros de apelo em massa (Ação, Aventura) e a presença de uma base de fãs (franquias).
+- **Insights da coluna `Overview`:** A análise com Word Clouds e o modelo BERT provaram que a sinopse é um indicador útil de gênero.
+- **Previsão da nota IMDB:** Foi resolvido como um problema de regressão com o XGBoost, utilizando features de reputação (Target Encoding de diretores/atores) como as mais importantes.
+
 ## 👨‍💻 Autor
-Julia Pedro Silva
-* **[Seu Nome Completo]**
-* **LinkedIn:** https://pt.linkedin.com/
-* **GitHub:** https://www.youtube.com/watch?v=TsaLQAetPLU
+* **[Julia Pedro Silva]**
+* **LinkedIn:** www.linkedin.com/in/julia-pedro-silva/
+
